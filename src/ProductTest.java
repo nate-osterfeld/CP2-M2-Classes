@@ -32,11 +32,12 @@ class ProductTest {
 
     @Test
     void toCSV() {
-        assertEquals("000002, guitar, ovation, 900", p2.toCSV());
+        assertEquals("000002, guitar, ovation, 900.0", p2.toCSV());
     }
 
     @Test
     void equals() {
+        p1.setID("000002");
         p1.setName("guitar");
         p1.setDescription("ovation");
         p1.setCost(900);

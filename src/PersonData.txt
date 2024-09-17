@@ -1,2 +1,1 @@
-000001, Nate, Osterfeld, Mr., 1993
-000002, Steve, Osterfeld, Mr., 1960
+000001, Theo, Von, Mr., 1985

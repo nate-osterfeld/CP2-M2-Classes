@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Product {
     private String name;
     private String description;
@@ -46,7 +48,7 @@ public class Product {
     }
 
     public String toCSV() { // name description, cost
-        return this.ID + ", " + this.description + ", " + this.cost;
+        return this.ID + ", " + this.name + ", " + this.description + ", " + this.cost;
     }
 
     public String toJSON() {
@@ -68,5 +70,18 @@ public class Product {
         retString += "<cost>" + this.cost + "</cost>";
 
         return retString;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Double.compare(cost, product.cost) == 0 && Objects.equals(name, product.name) && Objects.equals(description, product.description) && Objects.equals(ID, product.ID);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, description, ID, cost);
     }
 }

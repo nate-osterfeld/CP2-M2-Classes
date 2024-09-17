@@ -1,0 +1,2 @@
+000001, surface pro, 600.0
+000002, acoustic, 900.0
